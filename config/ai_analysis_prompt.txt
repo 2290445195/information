@@ -168,16 +168,13 @@
   "investment_analysis": {
     "market_outlook": "基于情报对市场趋势的总体判断（50字以内）。",
     "recommended_sectors": [
-      {"sector": "板块名称", "rationale": "推荐逻辑（与情报关联）", "duration": "预期持续期"},
-      ...
+      {"sector": "板块名称", "rationale": "推荐逻辑（与情报关联）", "duration": "预期持续期"}
     ],
     "fund_etf_recommendations": [
-      {"name": "基金/ETF名称", "code": "代码（可选）", "rationale": "推荐理由及弹性预期"},
-      ...
+      {"name": "基金/ETF名称", "code": "代码（可选）", "rationale": "推荐理由及弹性预期"}
     ],
     "stock_recommendations": [
-      {"name": "股票名称", "code": "代码（可选）", "rationale": "三重锚点推荐逻辑（情报关联+关键指标/形态+风险）"},
-      ...
+      {"name": "股票名称", "code": "代码（可选）", "rationale": "三重锚点推荐逻辑（情报关联+关键指标/形态+风险）"}
     ],
     "strategy_summary": "一句话策略综述（30字以内）"
 }
