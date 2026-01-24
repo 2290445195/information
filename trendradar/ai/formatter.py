@@ -76,7 +76,8 @@ def render_ai_analysis_markdown(result: AIAnalysisResult) -> str:
 
     if result.outlook_strategy:
         lines.extend(["**研判策略建议**", _format_list_content(result.outlook_strategy)])
-
+    if result.investment_analysis:
+            lines.extend(["**投资分析建议**", _format_list_content(result.investment_analysis)])   
     return "\n".join(lines)
 
 
@@ -101,7 +102,8 @@ def render_ai_analysis_feishu(result: AIAnalysisResult) -> str:
 
     if result.outlook_strategy:
         lines.extend(["**研判策略建议**", _format_list_content(result.outlook_strategy)])
-
+    if result.investment_analysis:
+        lines.extend(["**投资分析建议**", _format_list_content(result.investment_analysis)])    
     return "\n".join(lines)
 
 
@@ -126,7 +128,8 @@ def render_ai_analysis_dingtalk(result: AIAnalysisResult) -> str:
 
     if result.outlook_strategy:
         lines.extend(["#### 研判策略建议", _format_list_content(result.outlook_strategy)])
-
+    if result.investment_analysis:
+        lines.extend(["#### 投资分析建议", _format_list_content(result.investment_analysis)])
     return "\n".join(lines)
 
 
@@ -212,7 +215,9 @@ def render_ai_analysis_plain(result: AIAnalysisResult) -> str:
 
     if result.outlook_strategy:
         lines.extend(["[研判策略建议]", _format_list_content(result.outlook_strategy)])
-
+    
+    if result.investment_analysis:
+        lines.extend(["[投资分析建议]", _format_list_content(result.investment_analysis)])
     return "\n".join(lines)
 
 
