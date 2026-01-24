@@ -23,6 +23,7 @@ class AIAnalysisResult:
     signals: str = ""                    # 异动与弱信号
     rss_insights: str = ""               # RSS 深度洞察
     outlook_strategy: str = ""           # 研判与策略建议
+    investment_analysis: str = ""        # 投资分析与机会
 
     # 基础元数据
     raw_response: str = ""               # 原始响应
