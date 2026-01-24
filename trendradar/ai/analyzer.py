@@ -428,7 +428,7 @@ class AIAnalyzer:
             result.signals = data.get("signals", "")
             result.rss_insights = data.get("rss_insights", "")
             result.outlook_strategy = data.get("outlook_strategy", "")
-            
+            result.investment_analysis=data.get("investment_analysis","")
             result.success = True
 
         except json.JSONDecodeError as e:
