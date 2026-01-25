@@ -221,12 +221,13 @@ def render_ai_analysis_plain(result: AIAnalysisResult) -> str:
 
     if result.rss_insights:
         lines.extend(["[RSS 深度洞察]", _format_list_content(result.rss_insights), ""])
-
+    
+    if result.investment_analysis:
+            lines.extend(["[投资分析建议]", _format_list_content(result.investment_analysis)])
     if result.outlook_strategy:
         lines.extend(["[研判策略建议]", _format_list_content(result.outlook_strategy)])
     
-    if result.investment_analysis:
-        lines.extend(["[投资分析建议]", _format_list_content(result.investment_analysis)])
+   
     return "\n".join(lines)
 
 
