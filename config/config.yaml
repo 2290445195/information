@@ -101,6 +101,128 @@ rss:
       url: "https://finance.yahoo.com/news/rssindex"
       enabled: false                  # 禁用
 
+    # ═══════════════════════════════════════════════════════════
+    # 🏆 黄金白银走势 - 贵金属价格动态
+    # ═══════════════════════════════════════════════════════════
+    - id: "kitco-metals"
+      name: "Kitco 贵金属新闻"
+      url: "https://www.kitco.com/feed/"
+      max_age_days: 1                 # 贵金属价格变化快，只推送当天数据
+
+    - id: "bullion-vault"
+      name: "BullionVault 黄金白银"
+      url: "https://www.bullionvault.com/feed"
+      max_age_days: 1
+
+    - id: "cnmoney-gold"
+      name: "金融界 - 黄金资讯"
+      url: "https://feed.jrj.com.cn/channels/gjt2.xml"
+      max_age_days: 1                 # 国内黄金价格动态
+
+    - id: "sina-gold"
+      name: "新浪财经 - 黄金"
+      url: "https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/gj/index.phtml?bdate=&edate=&sort=&asc=&page=&symbol=&rssfile=rss"
+      enabled: false                  # 需要验证 URL 可用性
+
+    - id: "goldprice"
+      name: "Goldprice.org 每日汇总"
+      url: "https://www.goldprice.org/feed.xml"
+      max_age_days: 1
+
+    # ═══════════════════════════════════════════════════════════
+    # 🌍 国际形势 - 全球政治经济动态
+    # ═══════════════════════════════════════════════════════════
+    - id: "reuters-world"
+      name: "路透社 - 国际新闻"
+      url: "https://www.reuters.com/finance"
+      enabled: false                  # Reuters RSS 可能需要验证
+
+    - id: "bbc-world"
+      name: "BBC 国际新闻"
+      url: "http://feeds.bbc.co.uk/news/world/rss.xml"
+      max_age_days: 2
+
+    - id: "apnews-world"
+      name: "美联社 - 国际新闻"
+      url: "https://apnews.com/hub/world-news"
+      enabled: false                  # 需要验证 RSS 地址
+
+    - id: "dw-news"
+      name: "德国之声 - 国际"
+      url: "http://feeds.dw.com/rfi/en/china"
+      max_age_days: 2
+
+    - id: "ft-world"
+      name: "金融时报 - 国际"
+      url: "https://www.ft.com/?format=rss"
+      enabled: false                  # 可能需要订阅
+
+    - id: "cnn-world"
+      name: "CNN 国际"
+      url: "http://rss.cnn.com/rss/cnn_world.rss"
+      max_age_days: 2
+
+    - id: "wallstreetjournal"
+      name: "华尔街日报 - 国际"
+      url: "https://www.wsj.com/xml/rss/3_7085.xml"
+      enabled: false                  # 可能需要验证
+
+    - id: "economist"
+      name: "经济学人 - 国际"
+      url: "https://www.economist.com/international/rss.xml"
+      enabled: false                  # 需要验证 RSS 地址
+
+    - id: "ecns"
+      name: "中国新闻网 - 国际"
+      url: "http://www.ecns.cn/news/2016-07-26/index.xml"
+      max_age_days: 2
+
+    - id: "xinhuanet-world"
+      name: "新华网 - 国际新闻"
+      url: "http://news.xinhuanet.com/world/index.xml"
+      max_age_days: 2
+
+    - id: "cctv-world"
+      name: "央视新闻 - 国际"
+      url: "http://feed.cctv.com/rss/cctv_news_international.xml"
+      max_age_days: 2
+
+    # ═══════════════════════════════════════════════════════════
+    # 💼 财经与市场分析
+    # ═══════════════════════════════════════════════════════════
+    - id: "wallstreetcn"
+      name: "华尔街见闻 - RSS"
+      url: "https://www.wallstreetcn.com/feed"
+      max_age_days: 1
+
+    - id: "caixin"
+      name: "财新网 - 国际"
+      url: "https://www.caixinglobal.com/feed/"
+      max_age_days: 2
+
+    # ═══════════════════════════════════════════════════════════
+    # 🗽 特朗普相关
+    # ═══════════════════════════════════════════════════════════
+    - id: "trump-x-feed"
+      name: "特朗普 X 账号（通过 Nitter）"
+      url: "https://nitter.poast.org/realDonaldTrump/rss"
+      max_age_days: 1                 # 实时关注特朗普动态
+
+    - id: "trump-news-reuters"
+      name: "路透社 - 特朗普新闻"
+      url: "https://www.reuters.com/search/news?blob=Trump"
+      enabled: false                  # 需要验证 RSS 地址
+
+    - id: "trump-news-cnn"
+      name: "CNN - 特朗普"
+      url: "http://rss.cnn.com/~r/cnn_latest/~3/0/cnn_latest.rss"
+      enabled: false                  # 验证地址有效性
+
+    - id: "bbc-trump"
+      name: "BBC - 特朗普新闻"
+      url: "http://feeds.bbc.co.uk/news/world/us_and_canada/rss.xml"
+      max_age_days: 2                 # 包含美国政治新闻
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
@@ -226,9 +348,9 @@ notification:
   # 💡 想要精准定时？建议使用 Docker 部署在个人服务器上
   push_window:
     enabled: false                    # 是否启用推送时间窗口控制
-    start: "20:00"                    # 开始时间（北京时间）
-    end: "22:00"                      # 结束时间（北京时间）
-    once_per_day: true                # true=窗口内只推送一次，false=窗口内每次执行都推送
+    start: "08:00"                    # 开始时间（北京时间）
+    end: "02:30"                      # 结束时间（北京时间）
+    once_per_day: false               # true=窗口内只推送一次，false=窗口内每次执行都推送
 
   # 推送渠道配置
   channels:
